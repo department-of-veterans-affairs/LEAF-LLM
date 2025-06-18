@@ -1,0 +1,16 @@
+services:
+  leaf-llm:
+    build: .
+    volumes:
+      - /models/:/models
+    ports:
+      - 8012:8080
+    env_file:
+      - ./env_files/secrets.env
+    command: sh -c "./llama-server -m /models/gemma-3-4b-it-qat-q4_0-gguf/gemma-3-4b-it-q4_0.gguf 
+              --host 0.0.0.0 --port 8080
+              --api-key $$LLM_API_KEY
+              --alias gemma-3-4b-it-qat-q4_0
+              --seed 19300721
+              --temp 1.0 --top-p 0.95 --top-k 64
+              -ctk q4_0 -ctv q4_0 -fa --ctx-size 16384 --cache-reuse 256"
