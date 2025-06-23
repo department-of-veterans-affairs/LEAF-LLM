@@ -6,7 +6,7 @@ services:
     ports:
       - 8012:8080
     env_file:
-      - ./env_files/secrets.env
+      - ../env_files/secrets.env
     command: sh -c "./llama-server -m /models/gemma-3-4b-it-qat-q4_0-gguf/gemma-3-4b-it-q4_0.gguf 
               --host 0.0.0.0 --port 8080
               --api-key $$LLM_API_KEY

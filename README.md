@@ -10,7 +10,8 @@ Prerequisites:
 - OCI-compliant container engine such as Docker or Podman
 
 1. Download a compatible model, such as `gemma-3-4b-it-q4_0.gguf` from [Gemma 3](https://huggingface.co/google/gemma-3-4b-it-qat-q4_0-gguf)
-2. Update the `./docker/docker-compose.yml` file with the path to the model.
+2. Navigate to `./docker/cpu` or `./docker/cuda` depending on CUDA-compatible hardware availability
+2. Update `./docker/*/docker-compose.yml` with the path to the model.
 3. Start the container
 
 To quickly check functionality, navigate to `http://localhost:8012` or the relevant hostname and send a message

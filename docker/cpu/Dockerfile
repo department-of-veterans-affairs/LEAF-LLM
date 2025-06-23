@@ -1,6 +1,6 @@
 FROM redhat/ubi9
 
-RUN dnf update
+RUN dnf -y update
 RUN dnf -y install git cmake gcc gcc-c++ openblas-devel
 
 WORKDIR /app
