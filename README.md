@@ -19,4 +19,4 @@ To quickly check functionality, navigate to `http://localhost:8012` or the relev
 ## Integration with LEAF Agent
 In the LEAF Agent configuration:
 1. `LLM_API_KEY` must match
-2. `APP_AGENT_LLM_URL_CATEGORIZATION` must match the URL of the LLM
+2. `LLM_CATEGORIZATION_URL` must match the URL of the llama.cpp endpoint
