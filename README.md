@@ -16,7 +16,10 @@ Prerequisites:
 
 To quickly check functionality, navigate to `http://localhost:8012` or the relevant hostname and send a message
 
+## Configuraiton
+1. Generate a secure hash, and set the environment variable `LLM_API_KEY`
+
 ## Integration with LEAF Agent
-In the LEAF Agent configuration:
-1. `LLM_API_KEY` must match
-2. `LLM_CATEGORIZATION_URL` must match the URL of the llama.cpp endpoint
+LEAF Agent environment variables:
+1. `LLM_API_KEY` must match the key generated in this configuration
+2. `LLM_CATEGORIZATION_URL` must match the URL of the llama.cpp OpenAI-compatible Chat Completions API endpoint (e.g. `http://localhost:8012/v1/chat/completions`)

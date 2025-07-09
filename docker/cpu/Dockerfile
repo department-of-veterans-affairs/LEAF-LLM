@@ -9,7 +9,10 @@ RUN git clone https://github.com/ggerganov/llama.cpp
 WORKDIR /app/llama.cpp
 
 # Tested version
-RUN git checkout 8d947136546773f6410756f37fcc5d3e65b8135d
+ARG COMMIT_HASH=98bab638fb28cf95a5a66dd2d51b40d6c8f6d69a
+RUN git checkout master
+RUN git pull
+RUN git checkout ${COMMIT_HASH}
 
 RUN cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS -DLLAMA_CURL=OFF
 RUN cmake --build build --config Release -j $(nproc)
