@@ -21,4 +21,5 @@ services:
               --seed 19300721
               -ngl 99
               --temp 1.0 --top-p 0.95 --top-k 64
-              -ctk q4_0 -ctv q4_0 -fa --ctx-size 16384 --cache-reuse 256"
+              --parallel 8 --ctx-size 16384
+              -ctk q4_0 -ctv q4_0 --cache-reuse 256"
