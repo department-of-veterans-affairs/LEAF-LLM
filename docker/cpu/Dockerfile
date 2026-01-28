@@ -12,7 +12,7 @@ RUN git clone https://github.com/ggerganov/llama.cpp
 WORKDIR /app/llama.cpp
 
 # Tested version
-ARG COMMIT_HASH=1c7cf94b22a9dc6b1d32422f72a627787a4783a3
+ARG COMMIT_HASH=f6b533d898ce84bae8d9fa8dfc6697ac087800bf
 RUN git checkout master
 RUN git pull
 RUN git checkout ${COMMIT_HASH}
